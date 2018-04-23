@@ -1,0 +1,50 @@
+---
+output:
+  word_document:
+    reference_docx: word_template_v01.docx
+---
+
+![](rmarkdown.png)
+```{r setup, include=FALSE}
+
+
+#load library
+  
+library(knitr)
+library(markdown)
+library(rmarkdown)
+library(DT)
+library(leaflet)
+library(data.table)
+library(stringr)
+
+sch <- ks4top100[unique(ks4top100$URN)==schs,]
+
+
+ks4top100 %>%
+  filter (URN==sch$URN) -> letters
+
+
+
+
+
+```
+
+
+`r letters$SCHNAME`
+
+`r letters$ADDRESS1.x`
+
+`r letters$TOWN`
+
+`r letters$PCODE`
+
+###`r format(Sys.time(), "%d %B, %Y")`
+
+---
+
+#CONGRATULATIONS!
+##**`r letters$SCHNAME`**
+
+
+You have a school with KS4 pupils
