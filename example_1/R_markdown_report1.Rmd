@@ -120,7 +120,7 @@ a %>% filter(Answer == "Yes" & season == "Winter") -> q2_yes_winter
 
 #### 2. Question title
 
-* `r round(q2_yes_winter$freq *100, 0)`% of respondents said ...
+* `r round(q2_yes_winter$freq *100, 0)`% of respondents answered 'Yes' in the Winter sample...
 
 *Chart 1*
 
