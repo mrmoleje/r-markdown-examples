@@ -73,7 +73,7 @@ ks4top100 %>%
 
 
 for (schs in unique(ks4top100$URN)){
-  rmarkdown::render('letter.Rmd',  
+  rmarkdown::render('Example 2_letter.Rmd',  
                     output_file =  paste(schs, " Letter", ".docx", sep=''), 
                     output_dir = 'Exports')}
 
