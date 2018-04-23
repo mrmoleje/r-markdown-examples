@@ -1,0 +1,14 @@
+"0","chart4a<- ggplot(data=q4a, aes (x=Q4.1)) + 
+  geom_bar(show.legend = TRUE, fill= palette_example, aes(y=(..count..)/sum(..count..))) + #create bar and proportions
+  theme_classic()+
+  labs(y=""% of those that answered the question"")+  #naming y axis
+  labs(x=""Engagement of children"")+  #naming y axis
+  scale_y_continuous(labels=scales::percent,limits= c(0, 1))+  #adjusting x axis from 0.1 to 10%
+  geom_text(aes(label=scales::percent((..count..)/sum(..count..)),
+                y=(..count..)/sum(..count..)),stat=""count"",hjust=-0.8)+
+  coord_flip() #horiz
+ch4a <- round (table (q4a$Q4.1)/121*100, 1)
+ch4a <- as.data.frame(matrix (data=ch4a, nrow = 1, ncol = 5))
+"
+"2","data length [4] is not a sub-multiple or multiple of the number of columns [5]"
+"0","colnames(ch4a) <- c(""Fully"", ""Large"",""Mod"", ""Poor"",""Non"")"
