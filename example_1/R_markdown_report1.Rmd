@@ -32,19 +32,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #rm(list=ls())
 
+
 #load libraries
 
-library(scales)
-library (reshape2)
-library (grDevices)
+
 library(tidyr)
 library(dplyr) #for data manipulation
 library(stringr)
 library(readxl) #reading excel docs
 library(readr) #reading r
-library(tidyverse)
 library (ggplot2) #for plotting
-library (plotly)
 library (lattice)
 library (RColorBrewer)
 library (knitr)
